@@ -72,6 +72,7 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			NewInstance: ConfigInstance,
 		},
 		TableMap: map[string]*plugin.Table{
+			"gcp_admin_reports_login_activity":						   tableGcpAdminReportsLoginActivity(ctx),
 			"gcp_alloydb_cluster":                                     tableGcpAlloyDBCluster(ctx),
 			"gcp_alloydb_instance":                                    tableGcpAlloyDBInstance(ctx),
 			"gcp_apikeys_key":                                         tableGcpApiKeysKey(ctx),
